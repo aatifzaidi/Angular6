@@ -1,0 +1,18 @@
+<label>Username</label>
+<!-- Inserting the field using Two way binding & bootstap for design-->
+<input 
+  type="text"
+  class="form-control"
+  placeholder="usename"
+  [(ngModel)] ="username">
+
+  <!--Display the the input text-->
+  <p>Hello, {{username}}</p>
+
+  <button 
+    class="btn btn-warning"
+    [disabled]="username === ''"
+    (click)="clearName()"> <!--Alternative way: (click)="username = ''"-->
+    <i class="fa fa-trash-alt"></i>
+    Clear
+  </button>
